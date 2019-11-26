@@ -14,7 +14,7 @@ function buscarCategoria(idCategoria){
     });
 }
 
-// Função P/ Buscar Todos os Usuários
+// Função P/ Buscar Todos os Discípulos
 function buscarCategoriasAll(){
     $.ajax({
         method : 'GET',
@@ -25,7 +25,7 @@ function buscarCategoriasAll(){
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
             console.log(error);
         }
     });
@@ -39,7 +39,7 @@ function adicionarCategoria(categoria) {
         contentType: 'application/json',
         data : categoria,
         success : function (result) {
-            swal("Sucesso :)", "Categoria adicionada com sucesso.", "success");
+            swal("Sucesso :)", "Categoria adicionado com sucesso.", "success");
             limparCategoriaAdd();
             console.log(result);
         },
@@ -58,7 +58,7 @@ function alterarCategoria(categoria) {
         contentType: 'application/json',
         data : categoria,
         success : function (result) {
-            swal("Sucesso :)", "Categoria alterada com sucesso.", "success");
+            swal("Sucesso :)", "Categoria alterado com sucesso.", "success");
             limparCategoriaAlt();
             console.log(result);
         },

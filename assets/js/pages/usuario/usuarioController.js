@@ -40,7 +40,9 @@ $('a[data-toggle="tab"]').on('click', function () {
 $("#adicionarUsuario").on('click', function() {
     let usuario = {
         nome: $("#nomeUsuarioAdd").val(),
-        email: $("#emailUsuarioAdd").val(),
+        ufNascimento: {
+            id: $("#categoriaUsuarioAdd option:selected").val()
+        },
         cpf: $("#cpfUsuarioAdd").val(),
         categoria: {
             id: $("#categoriaUsuarioAdd option:selected").val()

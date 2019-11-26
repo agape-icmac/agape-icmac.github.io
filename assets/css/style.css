@@ -1,5 +1,8 @@
 ﻿/* Navbar ====================================== */
 @import url(materialize.css);
+.box-col-group {
+  height: 70px;
+}
 .navbar {
   font-family: "Roboto", sans-serif;
   -webkit-border-radius: 0;

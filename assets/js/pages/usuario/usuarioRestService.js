@@ -2,7 +2,7 @@
 function buscarUsuario(email, result){
     if (email != null){
         $.ajax({
-            url: Api + 'usuario/' + email,
+            url: Api + 'discipulo/' + email,
             success: function (data) {
                 result(data);
             },
@@ -12,7 +12,7 @@ function buscarUsuario(email, result){
         });
     } else {
         $.ajax({
-            url: Api+'usuario',
+            url: Api+'discipulo',
             success: function(data){
                 result(data);
             },
@@ -25,12 +25,12 @@ function buscarUsuario(email, result){
 
 
 // Função p/ cadastrar Usuário
-function adicionarUsuario(usuario) {
+function adicionarUsuario(discipulo) {
     $.ajax({
         method : 'POST',
-        url :  Api+'usuario',
+        url :  Api+'discipulo',
         contentType: 'application/json',
-        data : usuario,
+        data : discipulo,
         success : function () {
             swal("Sucesso :)", "Usuário adicionado com sucesso.", "success");
             limparUsuarioAdd();
@@ -42,12 +42,12 @@ function adicionarUsuario(usuario) {
 };
 
 // Função p/ alterar Usuário
-function alterarUsuario(usuario) {
+function alterarUsuario(discipulo) {
     $.ajax({
         method : 'POST',
-        url :  Api+'usuario',
+        url :  Api+'discipulo',
         contentType: 'application/json',
-        data : usuario,
+        data : discipulo,
         success : function () {
             swal("Sucesso :)", "Usuário alterado com sucesso.", "success");
             limparUsuarioAlt();
@@ -62,7 +62,7 @@ function alterarUsuario(usuario) {
 function removerUsuario(email) {
     $.ajax({
         method : 'DELETE',
-        url :  Api+'usuario/'+email,
+        url :  Api+'discipulo/'+email,
         success : function () {
             swal("Sucesso :)", "Usuário Removido: "+email, "success");
             limparUsuarioDel();

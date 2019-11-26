@@ -14,7 +14,7 @@ function buscarCategoria(idCategoria){
     });
 }
 
-// Função P/ Buscar Todos os Usuários
+// Função P/ Buscar Todos os Discípulos
 function buscarCategoriasAll(){
     $.ajax({
         method : 'GET',

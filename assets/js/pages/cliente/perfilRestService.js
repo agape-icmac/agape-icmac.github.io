@@ -14,7 +14,7 @@ function buscarPerfil(idPerfil){
     });
 }
 
-// Função P/ Buscar Todos os Usuários
+// Função P/ Buscar Todos os Discípulos
 function buscarPerfisAll(){
     $.ajax({
         method : 'GET',

@@ -1,5 +1,5 @@
 const URL = {
-    ApiProd: 'https://bitscamp.herokuapp.com/',
+    ApiProd: 'https://agape-backend.herokuapp.com/',
     ApiDev: 'http://localhost:9000/'
 };
 

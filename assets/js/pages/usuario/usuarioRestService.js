@@ -81,7 +81,7 @@ function preencherCategoriasUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
         }
     });
 }
@@ -94,7 +94,7 @@ function preencherPerfisUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
         }
     });
 }
@@ -107,7 +107,7 @@ function preencherEstadosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar as categorias: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
         }
     });
 }

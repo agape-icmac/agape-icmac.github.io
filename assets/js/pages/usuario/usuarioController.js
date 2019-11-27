@@ -2,14 +2,32 @@ $(document).ready(init);
 
 function init() {
 
-    preencherCategoriasUsuario(function (result) {
-        preencherCategoriaUsuarioView(result);
+    preencherEscolaridadesUsuario(function (result) {
+        preencherEscolaridadeUsuarioView(result);
     });
-    preencherPerfisUsuario(function (result) {
-        preencherPerfilUsuarioView(result);
+
+    preencherEstadosCivisUsuario(function (result) {
+        preencherEstadosCivisUsuarioView(result);
     });
-    preencherEstadosUsuario(function (result) {
-        preencherEstadoUsuarioView(result);
+
+    preencherBatismosUsuario(function (result) {
+        preencherBatismosUsuarioView(result);
+    });
+
+    preencherNacionalidadesUsuario(function (result) {
+        preencherNacionalidadesUsuarioView(result);
+    });
+
+    preencherCargosUsuario(function (result) {
+        preencherCargosUsuarioView(result);
+    });
+
+    preencherCursosUsuario(function (result) {
+        preencherCursosUsuarioView(result);
+    });
+
+    preencherMinisteriosUsuario(function (result) {
+        preencherMinisteriosUsuarioView(result);
     });
 
 };
@@ -39,24 +57,44 @@ $('a[data-toggle="tab"]').on('click', function () {
 
 $("#adicionarUsuario").on('click', function() {
     let usuario = {
+        escolaridade: {
+            id: $("#escolaridadeUsuarioAdd option:selected").val()
+        },
+        estadoCivil: {
+            id: $("#estadoCivilUsuarioAdd option:selected").val()
+        },
+        bastismo: {
+            id: $("#bastismoUsuarioAdd option:selected").val()
+        },
+        nacionalidade: {
+            id: $("#nacionalidadeUsuarioAdd option:selected").val()
+        },
+        cargos: {
+            id: $("#cargosUsuarioAdd option:selected").val()
+        },
+        cursos: {
+            id: $("#eventosUsuarioAdd option:selected").val()
+        },
+        ministerios: {
+            id: $("#eventosUsuarioAdd option:selected").val()
+        },
         nome: $("#nomeUsuarioAdd").val(),
-        ufNascimento: {
-            id: $("#categoriaUsuarioAdd option:selected").val()
+        nomePai: $("#nomePaiUsuarioAdd").val(),
+        nomeMae: $("#nomeMaeUsuarioAdd").val(),
+        nomeConjuge: $("#nomeConjugeUsuarioAdd").val(),
+        ufNascimento:  $("#ufNascimentoUsuarioAdd option:selected").val(),
+        naturalidade: $("#naturalidadeUsuarioAdd").val(),
+        sexo: {
+            id: $("#sexoUsuarioAdd option:selected").val()
         },
+        profissao: $("#profissaoUsuarioAdd").val(),
+        observacao: $("#observacaoUsuarioAdd").val(),
+        dataNascimento: $("#dtNascimentoUsuarioAdd").val(),
         cpf: $("#cpfUsuarioAdd").val(),
-        categoria: {
-            id: $("#categoriaUsuarioAdd option:selected").val()
-        },
-        municipio: $("#municipioUsuarioAdd").val(),
-        estado: {
-            id: $("#estadoUsuarioAdd option:selected").val()
-        },
-        endereco: $("#enderecoUsuarioAdd").val(),
-        cep: $("#cepUsuarioAdd").val(),
-        perfil: {
-            id: $("#perfilUsuarioAdd option:selected").val()
-        },
-        telefone: $("#telefoneUsuarioAdd").val()
+        rg: $("#rgUsuarioAdd").val(),
+        observacao: $("#observacoesUsuarioAdd").val(),
+        situacao: $("#situacaoUsuarioAdd").val(),
+
     };
 
     adicionarUsuario(JSON.stringify(usuario));

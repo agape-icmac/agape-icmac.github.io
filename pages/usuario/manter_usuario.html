@@ -288,11 +288,11 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="box-col-group">
-                                            <label for="emailUsuarioTab">E-mail</label>
+                                            <label for="cpfUsuarioTab">CPF</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input class="form-control" id="emailUsuarioTab"
-                                                           placeholder="E-mail do Usuário"
+                                                    <input class="form-control" id="cpfUsuarioTab"
+                                                           placeholder="CPF do Usuário"
                                                            type="text">
                                                 </div>
                                                 <span class="input-group-addon">
@@ -329,9 +329,12 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="box-col-group">
-                                            <label for="categoriaUsuarioAdd">Situação</label>
-                                            <select class="form-control" id="categoriaUsuarioAdd"
-                                                    name="categoriaUsuarioAdd">
+                                            <label for="situacaoUsuarioAdd">Situação</label>
+                                            <select class="form-control" id="situacaoUsuarioAdd"
+                                                    name="situacaoUsuarioAdd">
+                                                <option selected="selected">Selecione</option>
+                                                <option value="0">Ativo</option>
+                                                <option value="1">Afastado</option>
                                             </select>
                                         </div>
                                     </div>
@@ -432,6 +435,24 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
+                                            <label for="cargoUsuarioAdd">Função</label>
+                                            <select class="form-control" id="cargoUsuarioAdd"
+                                                    name="cargoUsuarioAdd">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="ministerioUsuarioAdd">Ministério</label>
+                                            <select class="form-control" id="ministerioUsuarioAdd"
+                                                    name="ministerioUsuarioAdd">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
                                             <label for="batismoUsuarioAdd">Batismo</label>
                                             <select class="form-control" id="batismoUsuarioAdd"
                                                     name="batismoUsuarioAdd">
@@ -485,19 +506,6 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="observacaoUsuarioAdd">Observação</label>
-                                            <div class="input-group">
-                                                <div class="form-line focused">
-                                                    <input class="form-control" id="observacaoUsuarioAdd"
-                                                           name="observacaoUsuarioAdd" placeholder="Observações do Usuário"
-                                                           type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="box-col-group">
                                             <label for="dtnascimentoUsuarioAdd">Data de nascimento</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
@@ -543,9 +551,9 @@
                                             <label for="observacoesUsuarioAdd">Observações</label>
                                             <div class="form-group">
                                                 <div class="form-line">
-                                                    <textarea class="form-control no-resize"
+                                                    <textarea class="form-control"
                                                               id="observacoesUsuarioAdd"
-                                                              name="observacoesUsuarioAdd"rows="4"
+                                                              name="observacoesUsuarioAdd"rows="1"
                                                               placeholder="Escreva as observações do usuário..."></textarea>
                                                 </div>
                                             </div>
@@ -561,11 +569,11 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="box-col-group">
-                                            <label for="emailUsuarioAltTab">E-mail</label>
+                                            <label for="cpfUsuarioAltTab">CPF</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input class="form-control" id="emailUsuarioAltTab"
-                                                           placeholder="E-mail do Usuário"
+                                                    <input class="form-control" id="cpfUsuarioAltTab"
+                                                           placeholder="CPF do Usuário"
                                                            type="text">
                                                 </div>
                                                 <span class="input-group-addon">
@@ -589,6 +597,7 @@
                                 </div>
 
                                 <div class="row">
+
                                     <div class="col-md-3">
                                         <div class="box-col-group">
                                             <label for="codigoUsuarioAlt">Codigo</label>
@@ -604,7 +613,19 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="nomeUsuarioAlt">Nome</label>
+                                            <label for="situacaoUsuarioAlt">Situação</label>
+                                            <select class="form-control" id="situacaoUsuarioAlt"
+                                                    name="situacaoUsuarioAlt">
+                                                <option selected="selected">Selecione</option>
+                                                <option value="0">Ativo</option>
+                                                <option value="1">Afastado</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="nomeUsuarioAdd">Nome</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
                                                     <input class="form-control" id="nomeUsuarioAlt"
@@ -617,11 +638,11 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="emailUsuarioAlt">E-mail</label>
+                                            <label for="ufUsuarioAlt">UF de nascimento</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input class="form-control" id="emailUsuarioAlt"
-                                                           name="emailUsuarioAlt" placeholder="E-mail do Usuário"
+                                                    <input class="form-control" id="ufUsuarioAlt"
+                                                           name="ufUsuarioAlt" placeholder="UF de nascimento"
                                                            type="text">
                                                 </div>
                                             </div>
@@ -630,19 +651,140 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="categoriaUsuarioAlt">Categoria</label>
-                                            <select class="form-control" id="categoriaUsuarioAlt">
+                                            <label for="nomePaiUsuarioAlt">Nome do pai</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="nomePaiUsuarioAlt"
+                                                           name="nomePaiUsuarioAlt" placeholder="Nome do pai"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="nomeMaeUsuarioAlt">Nome da mãe</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="nomeMaeUsuarioAlt"
+                                                           name="nomeMaeUsuarioAlt" placeholder="Nome da mãe"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="nacionalidadeUsuarioAlt">Nacionalidade</label>
+                                            <select class="form-control" id="nacionalidadeUsuarioAlt"
+                                                    name="nacionalidadeUsuarioAlt">
                                             </select>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="perfilUsuarioAlt">Perfil</label>
-                                            <select class="form-control" id="perfilUsuarioAlt">
+                                            <label for="sexoUsuarioAlt">Sexo</label>
+                                            <select class="form-control" id="sexoUsuarioAlt"
+                                                    name="sexoUsuarioAlt">
+                                                <option value="M">Masculino</option>
+                                                <option value="F">Feminino</option>
                                             </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="estadoCivilUsuarioAlt">Estado civil</label>
+                                            <select class="form-control" id="estadoCivilUsuarioAlt"
+                                                    name="estadoCivilUsuarioAlt">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="cargoUsuarioAlt">Função</label>
+                                            <select class="form-control" id="cargoUsuarioAlt"
+                                                    name="cargoUsuarioAlt">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="ministerioUsuarioAlt">Ministério</label>
+                                            <select class="form-control" id="ministerioUsuarioAlt"
+                                                    name="ministerioUsuarioAlt">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="batismoUsuarioAlt">Batismo</label>
+                                            <select class="form-control" id="batismoUsuarioAlt"
+                                                    name="batismoUsuarioAlt">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="nomeConjugeUsuarioAlt">Nome do conjuge</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="nomeConjugeUsuarioAlt"
+                                                           name="nomeConjugeUsuarioAlt" placeholder="Nome do conjuge"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="escolaridadeUsuarioAlt">Nível de escolaridade</label>
+                                            <select class="form-control" id="escolaridadeUsuarioAlt"
+                                                    name="escolaridadeUsuarioAlt">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="cursoUsuarioAlt">Cursos eclesiasticos</label>
+                                            <select class="form-control" id="cursoUsuarioAlt"
+                                                    name="cursoUsuarioAlt">
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="profissaoUsuarioAlt">Profissão</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="profissaoUsuarioAlt"
+                                                           name="profissaoUsuarioAlt" placeholder="Profissão do Usuário"
+                                                           type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="box-col-group">
+                                            <label for="dtnascimentoUsuarioAlt">Data de nascimento</label>
+                                            <div class="input-group">
+                                                <div class="form-line focused">
+                                                    <input class="form-control" id="dtnascimentoUsuarioAlt"
+                                                           name="dtnascimentoUsuarioAlt" placeholder="Observações do Usuário"
+                                                           type="date">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -662,36 +804,13 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="estadoUsuarioAlt">Estado</label>
-                                            <select class="form-control" id="estadoUsuarioAlt">
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-3">
-                                        <div class="box-col-group">
-                                            <label for="municipioUsuarioAlt">Municipio</label>
+                                            <label for="rgUsuarioAlt">RG</label>
                                             <div class="input-group">
                                                 <div class="form-line">
-                                                    <input class="form-control" id="municipioUsuarioAlt"
-                                                           name="municipioUsuarioAlt"
-                                                           placeholder="Município do Usuário"
-                                                           type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="box-col-group">
-                                            <label for="enderecoUsuarioAlt">Endereço</label>
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input class="form-control" id="enderecoUsuarioAlt"
-                                                           name="enderecoUsuarioAlt"
-                                                           placeholder="Endereço do Usuário"
+                                                    <input class="form-control"
+                                                           id="rgUsuarioAlt"
+                                                           name="rgUsuarioAlt"
+                                                           placeholder="RG do Usuário"
                                                            type="text">
                                                 </div>
                                             </div>
@@ -700,30 +819,18 @@
 
                                     <div class="col-md-3">
                                         <div class="box-col-group">
-                                            <label for="cepUsuarioAlt">CEP</label>
-                                            <div class="input-group">
+                                            <label for="observacoesUsuarioAlt">Observações</label>
+                                            <div class="form-group">
                                                 <div class="form-line">
-                                                    <input class="form-control" id="cepUsuarioAlt"
-                                                           name="cepUsuarioAlt" placeholder="CEP do Usuário"
-                                                           type="text">
+                                                <textarea class="form-control"
+                                                          id="observacoesUsuarioAlt"
+                                                          name="observacoesUsuarioAlt"rows="a"
+                                                          placeholder="Escreva as observações do usuário..."></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
-                                        <div class="box-col-group">
-                                            <label for="telefoneUsuarioAlt">Telefone</label>
-                                            <div class="input-group">
-                                                <div class="form-line">
-                                                    <input class="form-control" id="telefoneUsuarioAlt"
-                                                           name="telefoneUsuarioAlt"
-                                                           placeholder="Telefone do Usuário"
-                                                           type="text">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                             <!-- #END Tab Pane Alterar Usuário-->
@@ -733,11 +840,11 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="box-col-group">
-                                            <label for="emailUsuarioDelTab">E-mail</label>
+                                            <label for="cpfUsuarioDelTab">CPF</label>
                                             <div class="input-group">
                                                 <div class="form-line focused">
-                                                    <input class="form-control" id="emailUsuarioDelTab"
-                                                           placeholder="E-mail do Usuário"
+                                                    <input class="form-control" id="cpfUsuarioDelTab"
+                                                           placeholder="CPF do Usuário"
                                                            type="text">
                                                 </div>
                                                 <span class="input-group-addon">

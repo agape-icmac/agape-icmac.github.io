@@ -1,20 +1,35 @@
 // Preencher Formulário de Alteração de Usuário
 function preencherUsuarioAlt(usuario) {
     $("#codigoUsuarioAlt").val(usuario.id);
+    $("#escolaridadeUsuarioAlt").val(usuario.escolaridade.id);
+    $("#estadoCivilUsuarioAlt").val(usuario.estadoCivil.id);
+    $("#batismoUsuarioAlt").val(usuario.batismo.id);
+    $("#nacionalidadeUsuarioAlt").val(usuario.nacionalidade.id);
+    $("#cargoUsuarioAlt").val(usuario.cargos.id);
+    $("#cursoUsuarioAlt").val(usuario.cursos.id);
+    $("#ministerioUsuarioAlt").val(usuario.ministerios.id);
     $("#nomeUsuarioAlt").val(usuario.nome);
+    $("#nomeMaeUsuarioAlt").val(usuario.nomeMae);
+    $("#nomePaiUsuarioAlt").val(usuario.nomePai);
+    $("#nomeConjugeUsuarioAlt").val(usuario.nomeConjuge);
+    $("#ufNascimentoUsuarioAlt").val(usuario.ufNascimento);
+    $("#naturalidadeUsuarioAlt").val(usuario.naturalidade);
+    $("#sexoUsuarioAlt").val(usuario.sexo);
+    $("#profissaoUsuarioAlt").val(usuario.profissao);
+    $("#dtNascimentoUsuarioAlt").val(usuario.dataNascimento);
     $("#cpfUsuarioAlt").val(usuario.cpf);
-    $("#emailUsuarioAlt").val(usuario.email);
-    $("#estadoUsuarioAlt").val(usuario.estado.id);
-    $("#categoriaUsuarioAlt").val(usuario.categoria.id);
-    $("#municipioUsuarioAlt").val(usuario.municipio);
-    $("#enderecoUsuarioAlt").val(usuario.endereco);
-    $("#cepUsuarioAlt").val(usuario.cep);
-    $("#perfilUsuarioAlt").val(usuario.perfil.id);
-    $("#telefoneUsuarioAlt").val(usuario.telefone);
+    $("#rgUsuarioAlt").val(usuario.rg);
+    $("#observacoesUsuarioAlt").val(usuario.observacao);
+    $("#situacaoUsuarioAlt").val(usuario.situacao);
 
-    $('#estadoUsuarioAlt').selectpicker('refresh');
-    $('#categoriaUsuarioAlt').selectpicker('refresh');
-    $('#perfilUsuarioAlt').selectpicker('refresh');
+    $("#escolaridadeUsuarioAlt").selectpicker('refresh');
+    $("#estadoCivilUsuarioAlt").selectpicker('refresh');
+    $("#batismoUsuarioAlt").selectpicker('refresh');
+    $("#nacionalidadeUsuarioAlt").selectpicker('refresh');
+    $("#cargoUsuarioAlt").selectpicker('refresh');
+    $("#cursoUsuarioAlt").selectpicker('refresh');
+    $("#ministerioUsuarioAlt").selectpicker('refresh');
+    $("#sexoUsuarioAlt").selectpicker('refresh');
 
 }
 
@@ -24,37 +39,69 @@ function limparUsuarioResult() {
 
 function limparUsuarioAlt() {
     $("#codigoUsuarioAlt").val('');
+    $("#escolaridadeUsuarioAlt").val(0);
+    $("#estadoCivilUsuarioAlt").val(0);
+    $("#batismoUsuarioAlt").val(0);
+    $("#nacionalidadeUsuarioAlt").val(0);
+    $("#cargoUsuarioAlt").val(0);
+    $("#cursoUsuarioAlt").val(0);
+    $("#ministerioUsuarioAlt").val(0);
     $("#nomeUsuarioAlt").val('');
+    $("#nomeMaeUsuarioAlt").val('');
+    $("#nomePaiUsuarioAlt").val('');
+    $("#nomeConjugeUsuarioAlt").val('');
+    $("#ufNascimentoUsuarioAlt").val('');
+    $("#naturalidadeUsuarioAlt").val('');
+    $("#sexoUsuarioAlt").val(0);
+    $("#profissaoUsuarioAlt").val('');
+    $("#dtNascimentoUsuarioAlt").val('');
     $("#cpfUsuarioAlt").val('');
-    $("#emailUsuarioAlt").val('');
-    $("#estadoUsuarioAlt").val(0);
-    $("#categoriaUsuarioAlt").val(0);
-    $("#perfilUsuarioAlt").val(0);
-    $("#municipioUsuarioAlt").val('');
-    $("#enderecoUsuarioAlt").val('');
-    $("#cepUsuarioAlt").val('');
-    $("#telefoneUsuarioAlt").val('');
+    $("#rgUsuarioAlt").val('');
+    $("#observacoesUsuarioAlt").val('');
+    $("#situacaoUsuarioAlt").val('');
 
-    $('#estadoUsuarioAlt').selectpicker('refresh');
-    $('#categoriaUsuarioAlt').selectpicker('refresh');
-    $('#perfilUsuarioAlt').selectpicker('refresh');
+    $("#escolaridadeUsuarioAlt").selectpicker('refresh');
+    $("#estadoCivilUsuarioAlt").selectpicker('refresh');
+    $("#batismoUsuarioAlt").selectpicker('refresh');
+    $("#nacionalidadeUsuarioAlt").selectpicker('refresh');
+    $("#cargoUsuarioAlt").selectpicker('refresh');
+    $("#cursoUsuarioAlt").selectpicker('refresh');
+    $("#ministerioUsuarioAlt").selectpicker('refresh');
+    $("#sexoUsuarioAlt").selectpicker('refresh');
+
 }
 
 function limparUsuarioAdd() {
+    $("#codigoUsuarioAdd").val('');
+    $("#escolaridadeUsuarioAdd").val(0);
+    $("#estadoCivilUsuarioAdd").val(0);
+    $("#batismoUsuarioAdd").val(0);
+    $("#nacionalidadeUsuarioAdd").val(0);
+    $("#cargoUsuarioAdd").val(0);
+    $("#cursoUsuarioAdd").val(0);
+    $("#ministerioUsuarioAdd").val(0);
     $("#nomeUsuarioAdd").val('');
+    $("#nomeMaeUsuarioAdd").val('');
+    $("#nomePaiUsuarioAdd").val('');
+    $("#nomeConjugeUsuarioAdd").val('');
+    $("#ufNascimentoUsuarioAdd").val('');
+    $("#naturalidadeUsuarioAdd").val('');
+    $("#sexoUsuarioAdd").val(0);
+    $("#profissaoUsuarioAdd").val('');
+    $("#dtNascimentoUsuarioAdd").val('');
     $("#cpfUsuarioAdd").val('');
-    $("#emailUsuarioAdd").val('');
-    $("#estadoUsuarioAdd").val(0);
-    $("#categoriaUsuarioAdd").val(0);
-    $("#perfilUsuarioAdd").val(0);
-    $("#municipioUsuarioAdd").val('');
-    $("#enderecoUsuarioAdd").val('');
-    $("#cepUsuarioAdd").val('');
-    $("#telefoneUsuarioAdd").val('');
+    $("#rgUsuarioAdd").val('');
+    $("#observacoesUsuarioAdd").val('');
+    $("#situacaoUsuarioAdd").val('');
 
-    $('#estadoUsuarioAdd').selectpicker('refresh');
-    $('#categoriaUsuarioAdd').selectpicker('refresh');
-    $('#perfilUsuarioAdd').selectpicker('refresh');
+    $("#escolaridadeUsuarioAdd").selectpicker('refresh');
+    $("#estadoCivilUsuarioAdd").selectpicker('refresh');
+    $("#batismoUsuarioAdd").selectpicker('refresh');
+    $("#nacionalidadeUsuarioAdd").selectpicker('refresh');
+    $("#cargoUsuarioAdd").selectpicker('refresh');
+    $("#cursoUsuarioAdd").selectpicker('refresh');
+    $("#ministerioUsuarioAdd").selectpicker('refresh');
+    $("#sexoUsuarioAdd").selectpicker('refresh');
 }
 
 function limparUsuarioDel() {
@@ -207,7 +254,7 @@ function criarTabelaUsuario(resultTab, usuario) {
                 <tr>
                     <th>CÓDIGO</th>
                     <th>NOME</th>
-                    <th>E-MAIL</th>
+                    <th>CPF</th>
                     <th>FUNÇÃO</th>
                 </tr>
                 </thead>
@@ -229,8 +276,8 @@ function criarTabelaUsuario(resultTab, usuario) {
             `<tr>
             <td>${usuarios[i].id}</td>
             <td>${usuarios[i].nome}</td>
-            <td>${usuarios[i].email}</td>
-            <td>${usuarios[i].categoria.categoria}</td>
+            <td>${usuarios[i].cpf}</td>
+            <td>${usuarios[i].cargos.cargo}</td>
         </tr>`
         );
     }

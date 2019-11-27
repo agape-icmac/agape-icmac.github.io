@@ -62,55 +62,140 @@ function limparUsuarioDel() {
     $("#usuarioResultDel").html('');
 }
 
-function preencherCategoriaUsuarioView(categoria) {
-    $("#categoriaUsuarioAdd").empty();
-    $("#categoriaUsuarioAdd").append(`<option selected="selected" value="0">Selecione uma Categoria</option>`);
-    $.each(categoria, function (key, value) {
-        $("#categoriaUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.categoria));
+function preencherEscolaridadeUsuarioView(escolaridade) {
+    $("#escolaridadeUsuarioAdd").empty();
+    $("#escolaridadeUsuarioAdd").append(`<option selected="selected" value="0">Selecione uma escolaridade</option>`);
+    $.each(escolaridade, function (key, value) {
+        $("#escolaridadeUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.nivelEscolaridade));
     });
 
-    $("#categoriaUsuarioAlt").empty();
-    $("#categoriaUsuarioAlt").append(`<option selected="selected" value="0">Selecione uma Categoria</option>`);
-    $.each(categoria, function (key, value) {
-        $("#categoriaUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.categoria));
+    $("#escolaridadeUsuarioAlt").empty();
+    $("#escolaridadeUsuarioAlt").append(`<option selected="selected" value="0">Selecione uma escolaridade</option>`);
+    $.each(escolaridade, function (key, value) {
+        $("#escolaridadeUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.nivelEscolaridade));
     });
 
-    $('#categoriaUsuarioAdd').selectpicker('refresh');
-    $('#categoriaUsuarioAlt').selectpicker('refresh');
+    $('#escolaridadeUsuarioAdd').selectpicker('refresh');
+    $('#escolaridadeUsuarioAlt').selectpicker('refresh');
 }
 
-function preencherPerfilUsuarioView(perfil) {
-    $("#perfilUsuarioAdd").empty();
-    $("#perfilUsuarioAdd").append(`<option selected="selected" value="0">Selecione um Perfil</option>`);
-    $.each(perfil, function (key, value) {
-        $("#perfilUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.perfilCliente))
+function preencherEstadosCivisUsuarioView(estadoCivil) {
+    $("#estadoCivilUsuarioAdd").empty();
+    $("#estadoCivilUsuarioAdd").append(`<option selected="selected" value="0">Selecione uma opção</option>`);
+    $.each(estadoCivil, function (key, value) {
+        $("#estadoCivilUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.estadoCivil))
     });
 
-    $("#perfilUsuarioAlt").empty();
-    $("#perfilUsuarioAlt").append(`<option selected="selected" value="0">Selecione um Perfil</option>`);
-    $.each(perfil, function (key, value) {
-        $("#perfilUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.perfilCliente))
+    $("#estadoCivilUsuarioAlt").empty();
+    $("#estadoCivilUsuarioAlt").append(`<option selected="selected" value="0">Selecione uma opção</option>`);
+    $.each(estadoCivil, function (key, value) {
+        $("#estadoCivilUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.estadoCivil))
     });
 
-    $('#perfilUsuarioAdd').selectpicker('refresh');
-    $('#perfilUsuarioAlt').selectpicker('refresh');
+    $('#estadoCivilUsuarioAdd').selectpicker('refresh');
+    $('#estadoCivilUsuarioAlt').selectpicker('refresh');
 }
 
-function preencherEstadoUsuarioView(perfil) {
-    $("#estadoUsuarioAdd").empty();
-    $("#estadoUsuarioAdd").append(`<option selected="selected" value="0">Selecione um Estado</option>`);
-    $.each(perfil, function (key, value) {
-        $("#estadoUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.estado))
+function preencherBatismosUsuarioView(batismo) {
+    $("#batismoUsuarioAdd").empty();
+    $("#batismoUsuarioAdd").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(batismo, function (key, value) {
+        $("#batismoUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.nomeIgreja))
     });
 
-    $("#estadoUsuarioAlt").empty();
-    $("#estadoUsuarioAlt").append(`<option selected="selected" value="0">Selecione um Estado</option>`);
-    $.each(perfil, function (key, value) {
-        $("#estadoUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.estado))
+    $("#batismoUsuarioAlt").empty();
+    $("#batismoUsuarioAlt").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(batismo, function (key, value) {
+        $("#batismoUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.nomeIgreja))
     });
 
-    $('#estadoUsuarioAdd').selectpicker('refresh');
-    $('#estadoUsuarioAlt').selectpicker('refresh');
+    $('#batismoUsuarioAdd').selectpicker('refresh');
+    $('#batismoUsuarioAlt').selectpicker('refresh');
+}
+
+function preencherNacionalidadesUsuarioView(nacionalidade) {
+    $("#nacionalidadeUsuarioAdd").empty();
+    $("#nacionalidadeUsuarioAdd").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(nacionalidade, function (key, value) {
+        $("#nacionalidadeUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.nacionalidade))
+    });
+
+    $("#nacionalidadeUsuarioAlt").empty();
+    $("#nacionalidadeUsuarioAlt").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(nacionalidade, function (key, value) {
+        $("#nacionalidadeUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.nacionalidade))
+    });
+
+    $('#nacionalidadeUsuarioAdd').selectpicker('refresh');
+    $('#nacionalidadeUsuarioAlt').selectpicker('refresh');
+}
+
+function preencherCargosUsuarioView(cargo) {
+    $("#cargoUsuarioAdd").empty();
+    $("#cargoUsuarioAdd").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(cargo, function (key, value) {
+        $("#cargoUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.cargo))
+    });
+
+    $("#cargoUsuarioAlt").empty();
+    $("#cargoUsuarioAlt").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(cargo, function (key, value) {
+        $("#cargoUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.cargo))
+    });
+
+    $('#cargoUsuarioAdd').selectpicker('refresh');
+    $('#cargoUsuarioAlt').selectpicker('refresh');
+}
+
+function preencherCursosUsuarioView(curso) {
+    $("#cursoUsuarioAdd").empty();
+    $("#cursoUsuarioAdd").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(curso, function (key, value) {
+        $("#cursoUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.nome))
+    });
+
+    $("#cursoUsuarioAlt").empty();
+    $("#cursoUsuarioAlt").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(curso, function (key, value) {
+        $("#cursoUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.nome))
+    });
+
+    $('#cursoUsuarioAdd').selectpicker('refresh');
+    $('#cursoUsuarioAlt').selectpicker('refresh');
+}
+
+function preencherMinisteriosUsuarioView(ministerio) {
+    $("#ministerioUsuarioAdd").empty();
+    $("#ministerioUsuarioAdd").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(ministerio, function (key, value) {
+        $("#ministerioUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.descMinisterio))
+    });
+
+    $("#ministerioUsuarioAlt").empty();
+    $("#ministerioUsuarioAlt").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(ministerio, function (key, value) {
+        $("#ministerioUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.descMinisterio))
+    });
+
+    $('#ministerioUsuarioAdd').selectpicker('refresh');
+    $('#ministerioUsuarioAlt').selectpicker('refresh');
+}
+
+function preencherMinisteriosUsuarioView(ministerio) {
+    $("#ministerioUsuarioAdd").empty();
+    $("#ministerioUsuarioAdd").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(ministerio, function (key, value) {
+        $("#ministerioUsuarioAdd").append($('<option></option>').attr('value', value.id).text(value.descMinisterio))
+    });
+
+    $("#ministerioUsuarioAlt").empty();
+    $("#ministerioUsuarioAlt").append(`<option selected="selected" value="0">Selecione</option>`);
+    $.each(ministerio, function (key, value) {
+        $("#ministerioUsuarioAlt").append($('<option></option>').attr('value', value.id).text(value.descMinisterio))
+    });
+
+    $('#ministerioUsuarioAdd').selectpicker('refresh');
+    $('#ministerioUsuarioAlt').selectpicker('refresh');
 }
 
 // Criar Tabela De Listagem De Usuário

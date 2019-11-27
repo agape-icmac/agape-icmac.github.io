@@ -73,10 +73,10 @@ function removerUsuario(email) {
     });
 }
 
-function preencherCategoriasUsuario(result) {
+function preencherEscolaridadesUsuario(result) {
     $.ajax({
         method : 'GET',
-        url :  Api+'categoriaUsuario',
+        url :  Api+'escolaridade',
         success : function (data) {
             result(data);
         },
@@ -86,10 +86,10 @@ function preencherCategoriasUsuario(result) {
     });
 }
 
-function preencherPerfisUsuario(result) {
+function preencherEstadosCivisUsuario(result) {
     return $.ajax({
         method : 'GET',
-        url :  Api+'perfilCliente',
+        url :  Api+'estadoCivil',
         success : function (data) {
             result(data);
         },
@@ -99,10 +99,62 @@ function preencherPerfisUsuario(result) {
     });
 }
 
-function preencherEstadosUsuario(result) {
+function preencherBatismosUsuario(result) {
     $.ajax({
         method : 'GET',
-        url :  Api+'estado',
+        url :  Api+'batismo',
+        success : function (data) {
+            result(data);
+        },
+        error: function () {
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+        }
+    });
+}
+
+function preencherNacionalidadesUsuario(result) {
+    $.ajax({
+        method : 'GET',
+        url :  Api+'nacionalidade',
+        success : function (data) {
+            result(data);
+        },
+        error: function () {
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+        }
+    });
+}
+
+function preencherCargosUsuario(result) {
+    $.ajax({
+        method : 'GET',
+        url :  Api+'cargoDiscipulo',
+        success : function (data) {
+            result(data);
+        },
+        error: function () {
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+        }
+    });
+}
+
+function preencherCursosUsuario(result) {
+    $.ajax({
+        method : 'GET',
+        url :  Api+'curso',
+        success : function (data) {
+            result(data);
+        },
+        error: function () {
+            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+        }
+    });
+}
+
+function preencherMinisteriosUsuario(result) {
+    $.ajax({
+        method : 'GET',
+        url :  Api+'ministerio',
         success : function (data) {
             result(data);
         },

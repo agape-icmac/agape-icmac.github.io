@@ -69,24 +69,28 @@ $("#adicionarUsuario").on('click', function() {
         nacionalidade: {
             id: $("#nacionalidadeUsuarioAdd option:selected").val()
         },
-        cargos: {
-            id: $("#cargoUsuarioAdd option:selected").val()
-        },
-        cursos: {
-            id: $("#cursoUsuarioAdd option:selected").val()
-        },
-        ministerios: {
-            id: $("#ministerioUsuarioAdd option:selected").val()
-        },
+        cargos: [
+            {
+                id: $("#cargoUsuarioAdd option:selected").val()
+            }
+        ],
+        cursos: [
+            {
+                id: $("#cursoUsuarioAdd option:selected").val()
+            }
+        ],
+        ministerios: [
+            {
+                id: $("#ministerioUsuarioAdd option:selected").val()
+            }
+        ],
         nome: $("#nomeUsuarioAdd").val(),
         nomePai: $("#nomePaiUsuarioAdd").val(),
         nomeMae: $("#nomeMaeUsuarioAdd").val(),
         nomeConjuge: $("#nomeConjugeUsuarioAdd").val(),
         ufNascimento:  $("#ufNascimentoUsuarioAdd").val(),
         naturalidade: $("#naturalidadeUsuarioAdd").val(),
-        sexo: {
-            id: $("#sexoUsuarioAdd option:selected").val()
-        },
+        sexo: $("#sexoUsuarioAdd option:selected").val(),
         profissao: $("#profissaoUsuarioAdd").val(),
         dataNascimento: $("#dtNascimentoUsuarioAdd").val(),
         cpf: $("#cpfUsuarioAdd").val(),
@@ -113,24 +117,28 @@ $("#alterarUsuario").on('click', function() {
         nacionalidade: {
             id: $("#nacionalidadeUsuarioAlt option:selected").val()
         },
-        cargos: {
-            id: $("#cargoUsuarioAlt option:selected").val()
-        },
-        cursos: {
-            id: $("#cursoUsuarioAlt option:selected").val()
-        },
-        ministerios: {
-            id: $("#ministerioUsuarioAlt option:selected").val()
-        },
+        cargos: [
+            {
+                id: $("#cargoUsuarioAlt option:selected").val()
+            }
+        ],
+        cursos: [
+            {
+                id: $("#cursoUsuarioAlt option:selected").val()
+            }
+        ],
+        ministerios: [
+            {
+                id: $("#ministerioUsuarioAlt option:selected").val()
+            }
+        ],
         nome: $("#nomeUsuarioAlt").val(),
         nomePai: $("#nomePaiUsuarioAlt").val(),
         nomeMae: $("#nomeMaeUsuarioAlt").val(),
         nomeConjuge: $("#nomeConjugeUsuarioAlt").val(),
         ufNascimento:  $("#ufNascimentoUsuarioAlt").val(),
         naturalidade: $("#naturalidadeUsuarioAlt").val(),
-        sexo: {
-            id: $("#sexoUsuarioAlt option:selected").val()
-        },
+        sexo:  $("#sexoUsuarioAlt option:selected").val(),
         profissao: $("#profissaoUsuarioAlt").val(),
         dataNascimento: $("#dtNascimentoUsuarioAlt").val(),
         cpf: $("#cpfUsuarioAlt").val(),

@@ -150,7 +150,7 @@ $("#alterarUsuario").on('click', function() {
 
     };
 
-    adicionarUsuario(JSON.stringify(usuario));
+    alterarUsuario(JSON.stringify(usuario));
 });
 
 $("#removerUsuario").on('click', function() {

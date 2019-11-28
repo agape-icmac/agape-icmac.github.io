@@ -81,7 +81,7 @@ function preencherEscolaridadesUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -94,7 +94,7 @@ function preencherEstadosCivisUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -107,7 +107,7 @@ function preencherBatismosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -120,7 +120,7 @@ function preencherNacionalidadesUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -133,7 +133,7 @@ function preencherCargosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -146,7 +146,7 @@ function preencherCursosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -159,7 +159,7 @@ function preencherMinisteriosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }

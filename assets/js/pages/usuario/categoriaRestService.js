@@ -25,7 +25,7 @@ function buscarCategoriasAll(){
             console.log(result);
         },
         error: function (error) {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
             console.log(error);
         }
     });

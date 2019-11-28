@@ -56,6 +56,7 @@ $('a[data-toggle="tab"]').on('click', function () {
 });
 
 $("#adicionarUsuario").on('click', function() {
+
     let usuario = {
         escolaridade: {
             id: $("#escolaridadeUsuarioAdd option:selected").val()
@@ -88,7 +89,7 @@ $("#adicionarUsuario").on('click', function() {
         nomePai: $("#nomePaiUsuarioAdd").val(),
         nomeMae: $("#nomeMaeUsuarioAdd").val(),
         nomeConjuge: $("#nomeConjugeUsuarioAdd").val(),
-        ufNascimento:  $("#ufNascimentoUsuarioAdd").val(),
+        ufNascimento:  $("#ufUsuarioAdd").val(),
         naturalidade: $("#naturalidadeUsuarioAdd").val(),
         sexo: $("#sexoUsuarioAdd option:selected").val(),
         profissao: $("#profissaoUsuarioAdd").val(),
@@ -105,6 +106,7 @@ $("#adicionarUsuario").on('click', function() {
 
 $("#alterarUsuario").on('click', function() {
     let usuario = {
+        id: $("#codigoUsuarioAlt").val(),
         escolaridade: {
             id: $("#escolaridadeUsuarioAlt option:selected").val()
         },
@@ -136,7 +138,7 @@ $("#alterarUsuario").on('click', function() {
         nomePai: $("#nomePaiUsuarioAlt").val(),
         nomeMae: $("#nomeMaeUsuarioAlt").val(),
         nomeConjuge: $("#nomeConjugeUsuarioAlt").val(),
-        ufNascimento:  $("#ufNascimentoUsuarioAlt").val(),
+        ufNascimento:  $("#ufUsuarioAlt").val(),
         naturalidade: $("#naturalidadeUsuarioAlt").val(),
         sexo:  $("#sexoUsuarioAlt option:selected").val(),
         profissao: $("#profissaoUsuarioAlt").val(),

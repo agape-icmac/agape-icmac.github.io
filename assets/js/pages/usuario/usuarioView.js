@@ -12,7 +12,7 @@ function preencherUsuarioAlt(usuario) {
     $("#nomeMaeUsuarioAlt").val(usuario.nomeMae);
     $("#nomePaiUsuarioAlt").val(usuario.nomePai);
     $("#nomeConjugeUsuarioAlt").val(usuario.nomeConjuge);
-    $("#ufNascimentoUsuarioAlt").val(usuario.ufNascimento);
+    $("#ufUsuarioAlt").val(usuario.ufNascimento);
     $("#naturalidadeUsuarioAlt").val(usuario.naturalidade);
     $("#sexoUsuarioAlt").val(usuario.sexo);
     $("#profissaoUsuarioAlt").val(usuario.profissao);
@@ -50,7 +50,7 @@ function limparUsuarioAlt() {
     $("#nomeMaeUsuarioAlt").val('');
     $("#nomePaiUsuarioAlt").val('');
     $("#nomeConjugeUsuarioAlt").val('');
-    $("#ufNascimentoUsuarioAlt").val('');
+    $("#ufUsuarioAlt").val('');
     $("#naturalidadeUsuarioAlt").val('');
     $("#sexoUsuarioAlt").val(0);
     $("#profissaoUsuarioAlt").val('');
@@ -84,7 +84,7 @@ function limparUsuarioAdd() {
     $("#nomeMaeUsuarioAdd").val('');
     $("#nomePaiUsuarioAdd").val('');
     $("#nomeConjugeUsuarioAdd").val('');
-    $("#ufNascimentoUsuarioAdd").val('');
+    $("#ufUsuarioAdd").val('');
     $("#naturalidadeUsuarioAdd").val('');
     $("#sexoUsuarioAdd").val(0);
     $("#profissaoUsuarioAdd").val('');

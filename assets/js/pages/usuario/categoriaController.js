@@ -58,7 +58,6 @@ $("#buscarCategoriaAlt").on('click', function() {
     let idCategoriaAlt = $("#idCategoriaAlt").val();
     if (idCategoriaAlt != ""){
         buscarCategoriaAlt(idCategoriaAlt);
-        // $("#idCategoriaAlt").html('');
     }
 
 });

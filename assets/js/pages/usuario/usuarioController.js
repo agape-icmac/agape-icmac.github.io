@@ -93,7 +93,7 @@ $("#adicionarUsuario").on('click', function() {
         naturalidade: $("#naturalidadeUsuarioAdd").val(),
         sexo: $("#sexoUsuarioAdd option:selected").val(),
         profissao: $("#profissaoUsuarioAdd").val(),
-        dataNascimento: $("#dtNascimentoUsuarioAdd").val(),
+        dataNascimento: $("#dtNascimentoUsuarioAdd").getDate(),
         cpf: $("#cpfUsuarioAdd").val(),
         rg: $("#rgUsuarioAdd").val(),
         observacao: $("#observacoesUsuarioAdd").val(),

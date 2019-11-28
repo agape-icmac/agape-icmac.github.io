@@ -1,13 +1,13 @@
 // Função P/ Buscar Usuário Por Id
-function buscarUsuario(email, result){
-    if (email != null){
+function buscarUsuario(cpf, result){
+    if (cpf != null){
         $.ajax({
-            url: Api + 'discipulo/' + email,
+            url: Api + 'discipulo/' + cpf,
             success: function (data) {
                 result(data);
             },
             error: function () {
-                swal("Erro :(", "Não foi possível buscar o Usuário: " + email, "error");
+                swal("Erro :(", "Não foi possível buscar o Usuário: " + cpf, "error");
             }
         });
     } else {
@@ -59,16 +59,16 @@ function alterarUsuario(discipulo) {
 };
 
 // Função P/ Remover Usuário Por Id
-function removerUsuario(email) {
+function removerUsuario(cpf) {
     $.ajax({
         method : 'DELETE',
-        url :  Api+'discipulo/'+email,
+        url :  Api+'discipulo/'+cpf,
         success : function () {
-            swal("Sucesso :)", "Usuário Removido: "+email, "success");
+            swal("Sucesso :)", "Usuário Removido: "+cpf, "success");
             limparUsuarioDel();
         },
         error: function () {
-            swal("Erro :(", "Não foi possível remover o Usuário: "+email, "error");
+            swal("Erro :(", "Não foi possível remover o Usuário: "+cpf, "error");
         }
     });
 }
@@ -81,7 +81,7 @@ function preencherEscolaridadesUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -94,7 +94,7 @@ function preencherEstadosCivisUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -107,7 +107,7 @@ function preencherBatismosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -120,7 +120,7 @@ function preencherNacionalidadesUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -133,7 +133,7 @@ function preencherCargosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -146,7 +146,7 @@ function preencherCursosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }
@@ -159,7 +159,7 @@ function preencherMinisteriosUsuario(result) {
             result(data);
         },
         error: function () {
-            swal("Erro :(", "Não foi possível buscar  os cargoss: ", "warning");
+            swal("Erro :(", "Não foi possível buscar  os cargos: ", "warning");
         }
     });
 }

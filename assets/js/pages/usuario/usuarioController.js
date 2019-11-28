@@ -33,7 +33,7 @@ function init() {
 };
 
 $("#buscaUsuariosAll").on('click', function() {
-    $("#emailUsuarioTab").val(null);
+    $("#cpfUsuarioTab").val(null);
     buscaUsuarioController($(this));
 });
 
@@ -56,6 +56,7 @@ $('a[data-toggle="tab"]').on('click', function () {
 });
 
 $("#adicionarUsuario").on('click', function() {
+
     let usuario = {
         escolaridade: {
             id: $("#escolaridadeUsuarioAdd option:selected").val()
@@ -63,32 +64,35 @@ $("#adicionarUsuario").on('click', function() {
         estadoCivil: {
             id: $("#estadoCivilUsuarioAdd option:selected").val()
         },
-        bastismo: {
-            id: $("#bastismoUsuarioAdd option:selected").val()
+        batismo: {
+            id: $("#batismoUsuarioAdd option:selected").val()
         },
         nacionalidade: {
             id: $("#nacionalidadeUsuarioAdd option:selected").val()
         },
-        cargos: {
-            id: $("#cargosUsuarioAdd option:selected").val()
-        },
-        cursos: {
-            id: $("#eventosUsuarioAdd option:selected").val()
-        },
-        ministerios: {
-            id: $("#eventosUsuarioAdd option:selected").val()
-        },
+        cargos: [
+            {
+                id: $("#cargoUsuarioAdd option:selected").val()
+            }
+        ],
+        cursos: [
+            {
+                id: $("#cursoUsuarioAdd option:selected").val()
+            }
+        ],
+        ministerios: [
+            {
+                id: $("#ministerioUsuarioAdd option:selected").val()
+            }
+        ],
         nome: $("#nomeUsuarioAdd").val(),
         nomePai: $("#nomePaiUsuarioAdd").val(),
         nomeMae: $("#nomeMaeUsuarioAdd").val(),
         nomeConjuge: $("#nomeConjugeUsuarioAdd").val(),
-        ufNascimento:  $("#ufNascimentoUsuarioAdd option:selected").val(),
+        ufNascimento:  $("#ufUsuarioAdd").val(),
         naturalidade: $("#naturalidadeUsuarioAdd").val(),
-        sexo: {
-            id: $("#sexoUsuarioAdd option:selected").val()
-        },
+        sexo: $("#sexoUsuarioAdd option:selected").val(),
         profissao: $("#profissaoUsuarioAdd").val(),
-        observacao: $("#observacaoUsuarioAdd").val(),
         dataNascimento: $("#dtNascimentoUsuarioAdd").val(),
         cpf: $("#cpfUsuarioAdd").val(),
         rg: $("#rgUsuarioAdd").val(),
@@ -103,50 +107,75 @@ $("#adicionarUsuario").on('click', function() {
 $("#alterarUsuario").on('click', function() {
     let usuario = {
         id: $("#codigoUsuarioAlt").val(),
+        escolaridade: {
+            id: $("#escolaridadeUsuarioAlt option:selected").val()
+        },
+        estadoCivil: {
+            id: $("#estadoCivilUsuarioAlt option:selected").val()
+        },
+        batismo: {
+            id: $("#batismoUsuarioAlt option:selected").val()
+        },
+        nacionalidade: {
+            id: $("#nacionalidadeUsuarioAlt option:selected").val()
+        },
+        cargos: [
+            {
+                id: $("#cargoUsuarioAlt option:selected").val()
+            }
+        ],
+        cursos: [
+            {
+                id: $("#cursoUsuarioAlt option:selected").val()
+            }
+        ],
+        ministerios: [
+            {
+                id: $("#ministerioUsuarioAlt option:selected").val()
+            }
+        ],
         nome: $("#nomeUsuarioAlt").val(),
+        nomePai: $("#nomePaiUsuarioAlt").val(),
+        nomeMae: $("#nomeMaeUsuarioAlt").val(),
+        nomeConjuge: $("#nomeConjugeUsuarioAlt").val(),
+        ufNascimento:  $("#ufUsuarioAlt").val(),
+        naturalidade: $("#naturalidadeUsuarioAlt").val(),
+        sexo:  $("#sexoUsuarioAlt option:selected").val(),
+        profissao: $("#profissaoUsuarioAlt").val(),
+        dataNascimento: $("#dtNascimentoUsuarioAlt").val(),
         cpf: $("#cpfUsuarioAlt").val(),
-        email: $("#emailUsuarioAlt").val(),
-        categoria: {
-            id: $("#categoriaUsuarioAlt").val()
-        },
-        municipio: $("#municipioUsuarioAlt").val(),
-        estado: {
-            id: $("#estadoUsuarioAlt").val()
-        },
-        endereco: $("#enderecoUsuarioAlt").val(),
-        cep: $("#cepUsuarioAlt").val(),
-        perfil: {
-            id: $("#perfilUsuarioAlt").val()
-        },
-        telefone: $("#telefoneUsuarioAlt").val()
+        rg: $("#rgUsuarioAlt").val(),
+        observacao: $("#observacoesUsuarioAlt").val(),
+        situacao: $("#situacaoUsuarioAlt").val(),
+
     };
 
     alterarUsuario(JSON.stringify(usuario));
 });
 
 $("#removerUsuario").on('click', function() {
-    let emailUsuarioDel = $("#emailUsuarioDelTab").val();
-    if (emailUsuarioDel != ""){
-        $("#emailUsuarioDelTab").html('');
-        removerUsuario(emailUsuarioDel);
+    let cpfUsuarioDel = $("#cpfUsuarioDelTab").val();
+    if (cpfUsuarioDel != ""){
+        $("#cpfUsuarioDelTab").html('');
+        removerUsuario(cpfUsuarioDel);
     }
 });
 
 function buscaUsuarioController(data) {
-    let email;
+    let cpfUsuario
     let resultTab;
 
     if (data.attr("id") == "buscaUsuario" || data.attr("id") == "buscaUsuariosAll"){
-        email = $("#emailUsuarioTab").val();
+        cpfUsuario = $("#cpfUsuarioTab").val();
         resultTab = $("#usuarioResult");
     } else if (data.attr("id") == "buscaUsuarioDel"){
-        email = $("#emailUsuarioDelTab").val();
+        cpfUsuario = $("#cpfUsuarioDelTab").val();
         resultTab = $("#usuarioResultDel");
     } else if (data.attr("id") == "buscaUsuarioAlt"){
-        email = $("#emailUsuarioAltTab").val();
+        cpfUsuario = $("#cpfUsuarioAltTab").val();
     }
 
-    buscarUsuario(email, function (result) {
+    buscarUsuario(cpfUsuario, function (result) {
         if (data.attr("id") == "buscaUsuarioAlt"){
             preencherUsuarioAlt(result);
         } else {

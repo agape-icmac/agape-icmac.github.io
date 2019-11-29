@@ -33,23 +33,29 @@ function init() {
 };
 
 $("#buscaUsuariosAll").on('click', function() {
+
     $("#cpfUsuarioTab").val(null);
     buscaUsuarioController($(this));
+
 });
 
 $("#buscaUsuario").on('click', function() {
+
     buscaUsuarioController($(this));
 });
 
 $("#buscaUsuarioDel").on('click', function() {
+
     buscaUsuarioController($(this));
 });
 
 $("#buscaUsuarioAlt").on('click', function() {
+
     buscaUsuarioController($(this));
 });
 
 $('a[data-toggle="tab"]').on('click', function () {
+
     limparUsuarioAlt();
     limparUsuarioDel();
     limparUsuarioResult();
@@ -93,7 +99,7 @@ $("#adicionarUsuario").on('click', function() {
         naturalidade: $("#naturalidadeUsuarioAdd").val(),
         sexo: $("#sexoUsuarioAdd option:selected").val(),
         profissao: $("#profissaoUsuarioAdd").val(),
-        dataNascimento: $("#dtNascimentoUsuarioAdd").getDate(),
+        dataNascimento: $("#dtNascimentoUsuarioAdd").val(),
         cpf: $("#cpfUsuarioAdd").val(),
         rg: $("#rgUsuarioAdd").val(),
         observacao: $("#observacoesUsuarioAdd").val(),
@@ -105,6 +111,7 @@ $("#adicionarUsuario").on('click', function() {
 });
 
 $("#alterarUsuario").on('click', function() {
+
     let usuario = {
         id: $("#codigoUsuarioAlt").val(),
         escolaridade: {
@@ -154,14 +161,17 @@ $("#alterarUsuario").on('click', function() {
 });
 
 $("#removerUsuario").on('click', function() {
+
     let cpfUsuarioDel = $("#cpfUsuarioDelTab").val();
     if (cpfUsuarioDel != ""){
         $("#cpfUsuarioDelTab").html('');
         removerUsuario(cpfUsuarioDel);
     }
+
 });
 
 function buscaUsuarioController(data) {
+
     let cpfUsuario
     let resultTab;
 
@@ -182,4 +192,5 @@ function buscaUsuarioController(data) {
             criarTabelaUsuario(resultTab, result);
         }
     });
+
 }
